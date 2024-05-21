@@ -35,6 +35,8 @@ spec:
           env:
             - name: TARGET_SERVER
               value: ingress-nginx-controller.default.svc.cluster.local
+      imagePullSecrets:
+        - name: regcred
 
 ---
 
@@ -163,3 +165,16 @@ spec:
             limits:
               memory: "100Mi"
               cpu: "50m"
+      imagePullSecrets:
+        - name: regcred
+
+---
+
+apiVersion: v1
+kind: Secret
+type: kubernetes.io/dockerconfigjson
+metadata:
+    name: regcred
+    namespace: hairpin-proxy
+data:
+    .dockerconfigjson: <ENTER_DOCKER_PULL_SECRET_HERE>
