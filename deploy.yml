@@ -23,7 +23,7 @@ spec:
         app: hairpin-proxy-haproxy
     spec:
       containers:
-        - image: compumike/hairpin-proxy-haproxy:0.2.1
+        - image: andreacerasoni/development:hairpin-proxy-haproxy
           name: main
           resources:
             requests:
@@ -154,7 +154,7 @@ spec:
         runAsUser: 405
         runAsGroup: 65533
       containers:
-        - image: compumike/hairpin-proxy-controller:0.2.1
+        - image: andreacerasoni/development:hairpin-proxy-controller
           name: main
           resources:
             requests:
