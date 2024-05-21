@@ -1,4 +1,0 @@
-#!/bin/sh
-set -e
-docker build -t andreacerasoni/development:hairpin-proxy-haproxy .
-docker push andreacerasoni/development:hairpin-proxy-haproxy
