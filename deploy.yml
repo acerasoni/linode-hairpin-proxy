@@ -32,6 +32,9 @@ spec:
             limits:
               memory: "200Mi"
               cpu: "50m"
+          env:
+            - name: TARGET_SERVER
+              value: ingress-nginx-controller.default.svc.cluster.local
 
 ---
 
